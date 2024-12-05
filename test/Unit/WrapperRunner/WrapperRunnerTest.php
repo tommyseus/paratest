@@ -631,7 +631,7 @@ EOF;
      * @see https://bugs.php.net/bug.php?id=77726
      * @see https://github.com/php/php-src/pull/8114
      */
-    #[RequiresPhp('8.2')]
+    #[RequiresPhp('>=8.2')]
     public function testFunctionalParallelization(): void
     {
         $this->bareOptions['path']         = $this->fixture('function_parallelization_tests');
@@ -643,7 +643,7 @@ EOF;
 Processes:     2
 Runtime:       PHP %s
 
-..........                                                        10 / 10 (100%)
+....................                                              20 / 20 (100%)
 
 Time: %s, Memory: %s MB
 
@@ -653,7 +653,7 @@ EOF;
         self::assertSame(RunnerInterface::SUCCESS_EXIT, $runnerResult->exitCode);
     }
 
-    #[RequiresPhp('8.2')]
+    #[RequiresPhp('>=8.2')]
     public function testSameBeginningOfName(): void
     {
         $this->bareOptions['path']         = $this->fixture('same_beginning_of_name');
@@ -675,7 +675,7 @@ EOF;
         self::assertSame(RunnerInterface::SUCCESS_EXIT, $runnerResult->exitCode);
     }
 
-    #[RequiresPhp('8.2')]
+    #[RequiresPhp('>=8.2')]
     public function testFunctionalParallelizationWithJunitLogging(): void
     {
         $outputFile = $this->tmpDir . DIRECTORY_SEPARATOR . 'test-output.xml';
@@ -692,7 +692,7 @@ EOF;
 Processes:     1
 Runtime:       PHP %s
 
-..........                                                        10 / 10 (100%)
+....................                                              20 / 20 (100%)
 
 Time: %s, Memory: %s MB
 

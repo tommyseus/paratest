@@ -17,6 +17,14 @@ final class FunctionalParallelizationTest extends TestCase
             ['a', 'a'],
             ['b', 'b'],
             ['c', 'c'],
+            ['d', 'd'],
+            ['e', 'e'],
+            ['f', 'f'],
+            ['g', 'g'],
+            ['h', 'h'],
+            ['i', 'i'],
+            ['k', 'k'],
+            ['l', 'l'],
         ];
     }
 
@@ -27,6 +35,7 @@ final class FunctionalParallelizationTest extends TestCase
             'test1 with spaces' => ['a', 'a'],
             "test2 with \0" => ['b', 'b'],
             'test3' => ['c', 'c'],
+            'Test\\Class\\Name' => ['d', 'd'],
         ];
     }
 
